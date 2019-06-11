@@ -1,0 +1,36 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <body ng-controller="ListadoPokemon">
+    <div class="container fullContainer">
+      <!-- Header Bar -->
+      <div class="row fullWidth">
+        <div class="col-md-12 text-center header">
+          <h4 class="title">NEW POKEDEX</h4>
+        </div>
+      </div>
+      <!-- Pokemon Container Info -->
+      <br/>
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-3 text-center col-sm-4"  ng-repeat="x in Pok | orderBy : 'id'" ng-if="x.data != undefined "> -->
+          <div class="col-md-3 text-center col-sm-4" ng-repeat="y in Pokebola">
+            <div class="divInfo">
+              <!-- Pokemon Picture -->
+              <!-- <img class="pokePicture" src="{{x.sprites.front_default}}" alt="Poke"> -->
+              <img class="pokePicture" src="{{y.data.sprites.front_default}}" alt="Poke">
+            </div>
+            <!-- <div class="pokeName">{{x.data.name}}</div> -->
+            <div class="pokeName">{{y.data.name}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- AngularJS v1 Framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Function's File -->
+    <script src="js/script.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+  </ion-content>
+</ion-view>
